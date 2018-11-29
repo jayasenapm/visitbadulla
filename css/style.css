@@ -5,7 +5,7 @@ body{
 
 }
 .header-top{
-	height: 100px;
+	height: 150px;
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.37);
 }
@@ -17,7 +17,7 @@ body{
 	height: 2px;
 	width: 100%;
 	background-color: white;
-	float: left;
+	
 	
 }
 .menu{
@@ -28,7 +28,9 @@ body{
 	text-decoration: none;
 }
 .navbar{
-	width: 100%;
+	
+	margin: auto;
+
 }
 .navbar ul li{
 	list-style: none;
@@ -38,6 +40,7 @@ body{
 	width: 100px;
 	padding-left: 50px;
 	color: white;
+
 }
 .navbar ul li:hover{
 	color: yellow;
@@ -47,7 +50,20 @@ body{
 }
 .logo {
 	
-	color: #28a745;
+	float: left;
+	width: 200px;
+	display: inline;
+	padding-left: 50px;
+
+}
+.logo img{
+	position: absolute;
+	top:0px;
+	left: 0px;
+}
+.logo h1{
+	color: white;
+	float: left;
 
 }
 .logo span{
