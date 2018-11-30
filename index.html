@@ -16,34 +16,56 @@
 	<script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
 </head>
 <body>
-<div class="header-top">
-	
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 
-	<div class="heade-top-social">
-		<ul>
-			<li><i class="fab fa-facebook-f"></i></li>
-			<li><i class="fab fa-twitter"></i></li>
-			<li><i class="fab fa-youtube"></i></li>
-		</ul>
+
+<div class="header-top">
+<div class="container">
+	<div class="sos">
+		<a href=""><i class="fab fa-facebook-f"></i></a>
+		<a href=""><i class="fab fa-twitter"></i></a>
+		<a href=""><i class="fab fa-youtube"></i></a>
 
 	</div>
-
-<div class="container">
-<div class="kk"></div>
 	
+<div class="kk"></div>
+
+<div id="mobilemenu">
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#Attraction">Attraction</a>
+  <a href="contact">Contact Us</a>
+</div>
+
+<div class="mobicon">
+<div class="logo"><img src="images/logo.png"></div>
+<span  onclick="openNav()">&#9776; </span>
+</div>
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+</div>
 
 
-		
-<div class="navbar">
+<div class="navbar" id="home">
 
 		<div class="logo"><img src="images/logo.png"><h1> Visit <span>Badulla</span> </h1></div>
-		<div class="menu">
+		<div class="menu" id="myNavbar">
 			<ul>
-			<a href="" class="active"><li>Home</li></a>
-			<a href=""><li>About</li></a>
-			<a href=""><li>Gallery</li></a>
-			<a href=""><li>Attraction</li></a>
-			<a href=""><li>Contact Us</li></a>
+			<a href="#home" class="active"><li>Home</li></a>
+			<a href="#about"><li>About</li></a>
+			<a href="#gallery"><li>Gallery</li></a>
+			<a href="#Attraction"><li>Attraction</li></a>
+			<a href="#contact"><li>Contact Us</li></a>
 		</ul>
 
 		</div>
@@ -100,7 +122,7 @@
   duration: 2200,
 })
   </script>
-<div class="container">	
+<div class="container" id="about">	
 	<br>
 <div class="wel fade-right" data-aos="slide-up" ><h1 class="display-4">Welcome to Badulla</h1></div>
 
@@ -116,28 +138,55 @@
 
 <center>
 	<blockquote class="blockquote text-center">
-	<p data-aos="fade-left">Badulla marks the southeast extremity of the Hill Country and is a transport gateway to the east coast. It is one of Sri Lanka’s oldest towns, occupied briefly by the Portuguese, who torched it upon leaving. For the British, it was an important social centre, but beyond the pretty gardens and clock tower, any vestiges of a past – including a racecourse and cricket club – are lost in Badulla’s typical Sri Lankan bustle. The railway through the Hill Country from Colombo terminates here.
+	<p data-aos="fade-left">Badulla marks the southeast extremity of the Hill Country and is a transport gateway to the east coast. It is one of Sri Lanka's oldest towns, occupied briefly by the Portuguese, who torched it upon leaving. For the British, it was an important social centre, but beyond the pretty gardens and clock tower, any vestiges of a past – including a racecourse and cricket club – are lost in Badulla's typical Sri Lankan bustle. The railway through the Hill Country from Colombo terminates here.
 </p>
 </blockquote>
 </center>
 
 </div>
 <br>
-<div class="imageslide">
+<div class="imageslide" id="gallery">
 	<div class="row">
 		<div class="col-md-4">
 			<img fade-up-right src="images/h1.jpg" width="100%" height="100%">
+			<div class="imagecaption">
+				<center>
+					<h3>MUTHIYANGANYA TEMPLE</h3>
+					<a href=""><h4>Read more</h4></a>
+
+
+				</center>
+				
+			</div>
 		</div>
 		<div class="col-md-4">
 			<img data-aos="fade-up-left" src="images/h2.jpg" width="100%" height="100%">
+			<div class="imagecaption">
+				<center>
+					<h3>MUTHIYANGANYA TEMPLE</h3>
+					<a href=""><h4>Read more</h4></a>
+
+
+				</center>
+				
+			</div>
 		</div>
 		<div class="col-md-4">
 			<img data-aos="fade-down-right" src="images/h3.jpg" width="100%" height="100%">
+			<div class="imagecaption">
+				<center>
+					<h3>MUTHIYANGANYA TEMPLE</h3>
+					<a href=""><h4>Read more</h4></a>
+
+
+				</center>
+				
+			</div>
 		</div>
 	</div>
 </div>
 
-<div class="discription">
+<div class="discription" id="Attraction">
 	<div class="row">
 		<div class="col-md-6">
 			<div  data-aos="zoom-in-left" class="diswrite">
@@ -179,8 +228,9 @@
 			<br>
 			uvatourismsl@gmail.com<br>
 			+(094) 552229675<br>
-			+(094) 552229675
-			<div class="logo"><h1>Visit<span>Badulla</span></h1></div>
+			+(094) 552229675<br>
+			<div class="logo2"><img src="images/logo.png">
+				<br><h1>Visit<span>Badulla</span></h1></div>
 			</address>
 			
 		</div>
@@ -198,5 +248,83 @@
 		</div>
 	</div>
 </div>
+
+<script>
+$(document).ready(function(){
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".navbar", offset: 50});   
+
+  // Add smooth scrolling on all links inside the navbar
+  $("#myNavbar a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+});
+</script>
+
+<script>
+$(document).ready(function(){
+  // Add scrollspy to <body>
+  $('body').scrollspy({target: ".mobilemenu", offset: 50});   
+
+  // Add smooth scrolling on all links inside the navbar
+  $("#mySidenav a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    }  // End if
+  });
+});
+</script>
+
+
+<script>
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
 </body>
 </html>
